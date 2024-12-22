@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Header from "@/components/header.tsx";
+import Footer from "@/components/footer.tsx";
+import Slider from "@/components/silder.tsx";
+import Post from "@/components/post.tsx";
+import postSlide1 from "./assets/img/post-slide-1.jpg";
+import postLandscape1 from "./assets/img/post-landscape-1.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const sliderPosts: Post[] = [
+    {
+      title: "The Best Homemade Masks for Face (keep the Pimples Away)",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+      image: postSlide1,
+      link: "#",
+      meta: { date: "Jul 5th '22", category: "Beauty" },
+      author: "Jane Cooper",
+    },
+    // Add more slider posts here
+  ];
+
+  const culturePosts: Post[] = [
+    {
+      title: "11 Work From Home Part-Time Jobs You Can Do Now",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+      image: postLandscape1,
+      link: "#",
+      meta: { date: "Jul 5th '22", category: "Culture" },
+      author: "Cameron Williamson",
+    },
+    // Add more posts here
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main className="main">
+        <Slider posts={sliderPosts} />
+        <Post title="Culture" posts={culturePosts} seeAllLink="#" />
+        {/* Add more sections as needed */}
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
