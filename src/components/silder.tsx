@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-const Slider: FunctionComponent<SectionProps> = ({ posts }) => {
+const Slider: FunctionComponent<SliderProps> = ({ sliders }) => {
   return (
     <section
       id="slider"
@@ -14,7 +14,11 @@ const Slider: FunctionComponent<SectionProps> = ({ posts }) => {
       <div className="container mx-auto">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          pagination={{ clickable: true }}
+          pagination={{
+            el: ".swiper-pagination",
+            clickable: true,
+            type: "bullets",
+          }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -30,19 +34,19 @@ const Slider: FunctionComponent<SectionProps> = ({ posts }) => {
           }}
           className="relative"
         >
-          {posts.map((post, index) => (
+          {sliders.map((slider, index) => (
             <SwiperSlide key={index}>
               <div
                 className="relative flex h-[500px] items-end bg-cover bg-center"
-                style={{ backgroundImage: `url(${post.image})` }}
+                style={{ backgroundImage: `url(${slider.image})` }}
               >
                 <div className="relative z-10 max-w-lg p-8">
                   <h2 className="mb-4 text-2xl font-bold">
-                    <a href={post.link} className="hover:underline">
-                      {post.title}
+                    <a href={slider.link} className="hover:underline">
+                      {slider.title}
                     </a>
                   </h2>
-                  <p className="text-sm">{post.description}</p>
+                  <p className="text-sm">{slider.description}</p>
                 </div>
                 <div className="absolute inset-0 bg-black opacity-40"></div>
               </div>
@@ -50,6 +54,7 @@ const Slider: FunctionComponent<SectionProps> = ({ posts }) => {
           ))}
           <div className="swiper-button-next"></div>
           <div className="swiper-button-prev"></div>
+          {/* <div className="swiper-pagination bg-black"></div> */}
         </Swiper>
       </div>
     </section>
