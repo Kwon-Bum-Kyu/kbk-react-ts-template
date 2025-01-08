@@ -134,7 +134,29 @@ const culturePosts: Post[] = [
     link: "blog-details.html",
   },
   {
-    id: 1,
+    id: 2,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus",
+    image: postLandScape2,
+    author: { name: "Jenny Wilson", image: person1 },
+    link: "blog-details.html",
+  },
+  {
+    id: 3,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus",
+    image: postLandScape2,
+    author: { name: "Jenny Wilson", image: person1 },
+    link: "blog-details.html",
+  },
+  {
+    id: 4,
     category: "Culture",
     date: "Jul 5th '22",
     title: "How to Avoid Distraction and Stay Focused During Video Calls?",
