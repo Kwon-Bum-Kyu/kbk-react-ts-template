@@ -1,35 +1,52 @@
 import { FunctionComponent } from "react";
 
-const CulturePost: FunctionComponent<PostPros> = ({ posts, sidePosts }) => {
+const BusniessPost: FunctionComponent<PostPros> = ({ posts, sidePosts }) => {
   return (
-    <section id="culture-category" className="py-12">
+    <section id="business-category" className="py-12">
       {/* Section Title */}
       <div className="container mx-auto px-4">
         <div className="mb-6 flex items-center justify-between border-b pb-2">
-          <h2 className="text-3xl font-bold">Culture</h2>
+          <h2 className="text-3xl font-bold">Business</h2>
           <a href="/categories" className="text-gray-600 hover:underline">
-            See All Culture
+            See All Business
           </a>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto grid grid-cols-12 gap-6 px-4">
-        {/* Left Section */}
-        <div className="col-span-8 flex flex-col gap-12">
-          {/* 첫 번째 Row - Main Article */}
+        {/* Trending Section (Left) */}
+        <div className="col-span-3">
+          <div className="flex flex-col gap-6">
+            {sidePosts.map((post) => (
+              <div key={post.id} className="border-b pb-4">
+                <div className="text-sm text-gray-500">
+                  {post.category} <span className="mx-1">•</span> {post.date}
+                </div>
+                <h3 className="text-lg font-bold hover:underline">
+                  {post.title}
+                </h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  {post.author?.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Section */}
+        <div className="col-span-9 flex flex-col gap-12">
+          {/* Main Post */}
           <div className="grid grid-cols-12 gap-6">
-            {/* 이미지 섹션 */}
-            <div className="col-span-6">
+            <div className="col-span-8">
               <img
                 src={posts[0].image}
                 alt={posts[0].title}
                 className="h-full w-full rounded-md object-cover"
               />
             </div>
-
             {/* 텍스트 섹션 */}
-            <div className="col-span-6 flex flex-col justify-center">
+            <div className="col-span-4 flex flex-col justify-center">
               {/* 카테고리 및 날짜 */}
               <div className="mb-2 text-sm text-gray-500">
                 {posts[0].category} <span className="mx-1">•</span>{" "}
@@ -53,7 +70,7 @@ const CulturePost: FunctionComponent<PostPros> = ({ posts, sidePosts }) => {
             </div>
           </div>
 
-          {/* 두 번째 Row - Sub Articles */}
+          {/* Sub Posts */}
           <div className="grid grid-cols-3 gap-6">
             {/* 왼쪽 섹션 */}
             <div className="col-span-1 grid grid-cols-1 gap-6">
@@ -126,28 +143,9 @@ const CulturePost: FunctionComponent<PostPros> = ({ posts, sidePosts }) => {
             </div>
           </div>
         </div>
-
-        {/* Right Section - Trending */}
-        <div className="col-span-4">
-          <div className="flex flex-col gap-6">
-            {sidePosts.map((post) => (
-              <div key={post.id} className="border-b pb-4">
-                <div className="text-sm text-gray-500">
-                  {post.category} <span>•</span> {post.date}
-                </div>
-                <h3 className="text-lg font-bold hover:underline">
-                  {post.title}
-                </h3>
-                <p className="mt-1 text-sm text-gray-500">
-                  {post.author?.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
 };
 
-export default CulturePost;
+export default BusniessPost;

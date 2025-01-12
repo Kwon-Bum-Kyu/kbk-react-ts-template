@@ -217,10 +217,108 @@ const cultureSidePosts: Post[] = [
   },
 ];
 
+const businessPosts: Post[] = [
+  {
+    id: 1,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "11 Work From Home Part-Time Jobs You Can Do Now",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus",
+    image: postLandScape1,
+    author: { name: "Jenny Wilson", image: person1 },
+    link: "blog-details.html",
+  },
+  {
+    id: 2,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus",
+    image: postLandScape2,
+    author: { name: "Jenny Wilson", image: person1 },
+    link: "blog-details.html",
+  },
+  {
+    id: 3,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus",
+    image: postLandScape2,
+    author: { name: "Jenny Wilson", image: person1 },
+    link: "blog-details.html",
+  },
+  {
+    id: 4,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus",
+    image: postLandScape2,
+    author: { name: "Jenny Wilson", image: person1 },
+    link: "blog-details.html",
+  },
+];
+
+const businessSidePosts: Post[] = [
+  {
+    id: 1,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title:
+      "17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut",
+    author: { name: "Jenny Wilson", image: person1 },
+    image: postLandScape2,
+    link: "blog-details.html",
+  },
+  {
+    id: 1,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "9 Half-up/half-down Hairstyles for Long and Medium Hair",
+    author: { name: "Jenny Wilson", image: person1 },
+    image: postLandScape2,
+    link: "blog-details.html",
+  },
+  {
+    id: 1,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "Life Insurance And Pregnancy: A Working Mom’s Guide",
+    author: { name: "Jenny Wilson", image: person1 },
+    image: postLandScape2,
+    link: "blog-details.html",
+  },
+  {
+    id: 1,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "The Best Homemade Masks for Face (keep the Pimples Away)",
+    author: { name: "Jenny Wilson", image: person1 },
+    image: postLandScape2,
+    link: "blog-details.html",
+  },
+  {
+    id: 1,
+    category: "Culture",
+    date: "Jul 5th '22",
+    title: "10 Life-Changing Hacks Every Working Mom Should Know",
+    author: { name: "Jenny Wilson", image: person1 },
+    image: postLandScape2,
+    link: "blog-details.html",
+  },
+];
+
 export {
   sliderPosts,
   trendingPosts,
   trendingSidePosts,
   culturePosts,
   cultureSidePosts,
+  businessPosts,
+  businessSidePosts,
 };
