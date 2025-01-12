@@ -24,7 +24,7 @@ const CulturePost: FunctionComponent<PostPros> = ({ posts, sidePosts }) => {
               <img
                 src={posts[0].image}
                 alt={posts[0].title}
-                className="h-full w-full rounded-md object-cover"
+                className="h-327 w-full rounded-md object-cover"
               />
             </div>
 

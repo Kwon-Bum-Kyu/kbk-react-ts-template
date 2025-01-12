@@ -8,12 +8,15 @@ import {
   businessSidePosts,
   culturePosts,
   cultureSidePosts,
+  lifeStylePosts,
+  lifeStyleSidePosts,
   sliderPosts,
   trendingPosts,
   trendingSidePosts,
 } from "@/config/post.ts";
 import CulturePost from "@/components/culturePost.tsx";
 import BusniessPost from "@/components/businessPost.tsx";
+import LifeStylePost from "@/components/lifeStylePost.tsx";
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
         <TrendingPost posts={trendingPosts} sidePosts={trendingSidePosts} />
         <CulturePost posts={culturePosts} sidePosts={cultureSidePosts} />
         <BusniessPost posts={businessPosts} sidePosts={businessSidePosts} />
+        <LifeStylePost posts={lifeStylePosts} sidePosts={lifeStyleSidePosts} />
         {/* Add more sections as needed */}
       </main>
       <Footer />
