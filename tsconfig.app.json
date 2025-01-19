@@ -24,7 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/img": ["./src/assets/img/*"]
+      "@/img": ["./src/assets/img/*"],
+      "@/common": ["./src/components/common/*"]
     }
   },
   "include": ["src"]

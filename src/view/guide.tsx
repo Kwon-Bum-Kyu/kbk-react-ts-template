@@ -1,12 +1,11 @@
-import "./App.css";
-import Typography from "@/components/common/typography";
-import Grid from "@/components/common/grid";
-import GridItem from "@/components/common/gridItem";
+import Grid from "@/components/common/grid.tsx";
+import GridItem from "@/components/common/gridItem.tsx";
+import Typography from "@/components/common/typography.tsx";
 
-function App() {
+const Guide = () => {
   return (
     <>
-      <main className="main">
+      <div>
         <Typography variant="h1">H1 Title</Typography>
         <Typography variant="h2">H2 Title</Typography>
         <Typography variant="large">This is a large text.</Typography>
@@ -53,9 +52,9 @@ function App() {
             <GridItem>12</GridItem>
           </Grid>
         </div>
-      </main>
+      </div>
     </>
   );
-}
+};
 
-export default App;
+export default Guide;
