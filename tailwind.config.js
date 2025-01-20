@@ -76,7 +76,7 @@ export default {
       screens: {
         mobile: "640px", // 모바일
         tablet: "768px", // 태블릿
-        desktop: "1280px",
+        desktop: "1440px",
       },
     },
   },
