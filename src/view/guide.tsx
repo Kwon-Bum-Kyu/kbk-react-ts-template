@@ -1,11 +1,20 @@
-import Grid from "@/components/common/grid.tsx";
-import GridItem from "@/components/common/gridItem.tsx";
-import Typography from "@/components/common/typography.tsx";
+import {
+  Button,
+  ButtonGroup,
+  Grid,
+  GridItem,
+  Typography,
+} from "@/components/common/index.ts";
+import React from "react";
+
+const Paddings = ({ children }: { children: React.ReactNode }) => (
+  <div className="p-10">{children}</div>
+);
 
 const Guide = () => {
   return (
-    <>
-      <div>
+    <div className="container gap-4">
+      <Paddings>
         <Typography variant="h1">H1 Title</Typography>
         <Typography variant="h2">H2 Title</Typography>
         <Typography variant="large">This is a large text.</Typography>
@@ -14,7 +23,8 @@ const Guide = () => {
         </Typography>
         <Typography variant="small">This is small text.</Typography>
         <Typography variant="xsmall">This is extra small text.</Typography>
-
+      </Paddings>
+      <Paddings>
         {/* Blue Palette */}
         <div className="bg-blue-900 p-4 text-white">Blue 900 (Active)</div>
         <div className="bg-blue-800 p-4 text-white">Blue 800 (Hover)</div>
@@ -32,28 +42,58 @@ const Guide = () => {
         {/* System Colors */}
         <div className="bg-system-red p-4 text-white">Red (Error)</div>
         <div className="bg-system-green p-4 text-white">Green (Success)</div>
-        <div className="bg-system-white border p-4 text-black">
+        <div className="border bg-system-white p-4 text-black">
           White (Background)
         </div>
-        <div className="p-8">
-          <h1 className="mb-4 text-2xl font-bold">Responsive Grid</h1>
-          <Grid>
-            <GridItem>1</GridItem>
-            <GridItem>2</GridItem>
-            <GridItem>3</GridItem>
-            <GridItem>4</GridItem>
-            <GridItem>5</GridItem>
-            <GridItem>6</GridItem>
-            <GridItem>7</GridItem>
-            <GridItem>8</GridItem>
-            <GridItem>9</GridItem>
-            <GridItem>10</GridItem>
-            <GridItem>11</GridItem>
-            <GridItem>12</GridItem>
-          </Grid>
+      </Paddings>
+      <Paddings>
+        <h1 className="mb-4 text-2xl font-bold">Responsive Grid</h1>
+        <Grid>
+          <GridItem>1</GridItem>
+          <GridItem>2</GridItem>
+          <GridItem>3</GridItem>
+          <GridItem>4</GridItem>
+          <GridItem>5</GridItem>
+          <GridItem>6</GridItem>
+          <GridItem>7</GridItem>
+          <GridItem>8</GridItem>
+          <GridItem>9</GridItem>
+          <GridItem>10</GridItem>
+          <GridItem>11</GridItem>
+          <GridItem>12</GridItem>
+        </Grid>
+      </Paddings>
+      <Paddings>
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="primary" disabled>
+          Disabled
+        </Button>
+      </Paddings>
+      <Paddings>
+        <div className="w-72 flex-col gap-y-10">
+          {/* 텍스트 버튼 그룹 */}
+          <ButtonGroup
+            buttons={[
+              { label: "Button 1", onClick: () => console.log("1") },
+              { label: "Button 2" },
+              { label: "Button 3", disabled: true },
+            ]}
+          />
+
+          {/* 아이콘 버튼 그룹 (자동 감지) */}
+          <ButtonGroup
+            buttons={[
+              { label: <Typography variant="xsmall">아이</Typography> },
+              {
+                label: <Typography variant="xsmall">아이</Typography>,
+                disabled: true,
+              },
+            ]}
+          />
         </div>
-      </div>
-    </>
+      </Paddings>
+    </div>
   );
 };
 

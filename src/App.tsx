@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import "./App.css";
 import { Outlet } from "react-router-dom";
-import Typography from "@/components/common/typography.tsx";
+import { Typography } from "@/components/common/index.ts";
 
 function App() {
   return (

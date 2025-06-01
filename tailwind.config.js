@@ -56,18 +56,6 @@ export default {
           green: "#07405F", // Success
           white: "#FFFFFF", // Primary Background
         },
-        primary: {
-          DEFAULT: "#084777",
-          hover: "#042F5A",
-          active: "#022047",
-          disabled: "#A3B4C0",
-        },
-        secondary: {
-          DEFAULT: "#E7E7E6",
-          hover: "#C2C2C1",
-          active: "#9A9A98",
-          disabled: "#F5F5F5",
-        },
       },
       spacing: {
         16: "16px",
@@ -77,6 +65,7 @@ export default {
         mobile: "640px", // 모바일
         tablet: "768px", // 태블릿
         desktop: "1440px",
+        wide: "1920px",
       },
     },
   },
