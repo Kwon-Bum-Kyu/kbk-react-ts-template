@@ -3,15 +3,28 @@ import {
   ButtonGroup,
   Grid,
   GridItem,
+  Input,
   Typography,
+  Dropdown,
+  Slider,
+  DatePicker,
+  Breadcrumb,
+  Tabs,
+  SystemIcon,
+  Empty,
 } from "@/components/common/index.ts";
-import React from "react";
+import Pagination from "@/components/common/Pagenation/index.tsx";
+import React, { useState } from "react";
+import { DateRange } from "react-day-picker";
 
-const Paddings = ({ children }: { children: React.ReactNode }) => (
+const Paddings = ({ children }: { children?: React.ReactNode }) => (
   <div className="p-10">{children}</div>
 );
 
 const Guide = () => {
+  const [val, setVal] = useState(50); // Continuous
+  const [range, setRange] = useState<DateRange | undefined>();
+
   return (
     <div className="container gap-4">
       <Paddings>
@@ -92,6 +105,101 @@ const Guide = () => {
             ]}
           />
         </div>
+      </Paddings>
+      <Paddings>
+        <Input
+          label="Label"
+          placeholder="Text input"
+          assistiveText="Assistive text"
+        />
+
+        <Input
+          label="Label"
+          placeholder="Text input"
+          errorMessage="Error message"
+        />
+
+        <Input label="Label" placeholder="Text input" disabled />
+      </Paddings>
+      <Paddings>
+        <Dropdown
+          label="Label"
+          assistiveText="Assistive text"
+          placeholder="Select"
+          options={[
+            { label: "Item 1", value: "1" },
+            { label: "Item 2", value: "2" },
+            { label: "Item 3", value: "3" },
+          ]}
+          value={"2"}
+          // onChange={setSelected}
+        />
+
+        <Dropdown
+          label="Label"
+          errorMessage="Error message"
+          options={[{ label: "Item 1", value: "1" }]}
+          value="1"
+          disabled
+        />
+
+        <Dropdown
+          label="Label"
+          searchable
+          options={[
+            { label: "Lorem ipsum", value: "1" },
+            { label: "Irure dolor", value: "2" },
+            { label: "Labor et dolore", value: "3" },
+          ]}
+          value={"1"}
+          // onChange={setValue}
+        />
+      </Paddings>
+      <Paddings>
+        <Slider value={val} onChange={setVal} />
+        <span>Discrete</span>
+        <Slider value={val} onChange={setVal} step={10} />
+        <span>Disabled</span>
+        <Slider value={val} onChange={() => {}} disabled />
+        <span>Hide value</span>
+        <Slider value={val} onChange={setVal} showValue={false} />
+      </Paddings>
+      <Paddings>
+        <DatePicker
+          mode="range"
+          value={range}
+          onChange={(val) => {
+            if (!val || "from" in val) {
+              setRange(val as DateRange | undefined);
+            }
+          }}
+        />
+      </Paddings>
+      <Paddings>
+        <Breadcrumb items={[{ label: "Home" }, { label: "Products" }]} />
+      </Paddings>
+      <Paddings>
+        <Tabs
+          tabs={["Tab 1", "Tab 2", "Tab 3"]}
+          activeTab={"Tab 1"}
+          onChange={() => {}}
+          variant="pill"
+        />
+      </Paddings>
+      <Paddings>
+        <Pagination current={0} total={10} onChange={() => {}} />
+      </Paddings>
+      <Paddings>
+        <SystemIcon name="eye" size={20} />
+        <SystemIcon name="close" className="text-red-500" size={20} />
+        <SystemIcon name="check-circle-outline" size={24} />
+      </Paddings>
+      <Paddings>
+        <Empty type="blank" />
+        <Empty type="image" />
+        <Empty type="text" />
+        <Empty type="image" size={48} />
+        <Empty type="text" size={32} />
       </Paddings>
     </div>
   );
