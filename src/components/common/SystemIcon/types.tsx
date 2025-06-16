@@ -29,7 +29,10 @@ export type SystemIconName =
   | "check-circle"
   | "check-circle-outline"
   | "square"
-  | "square-outline";
+  | "square-outline"
+  | "linkedin"
+  | "github"
+  | "globe";
 
 export interface SystemIconProps {
   name: SystemIconName;

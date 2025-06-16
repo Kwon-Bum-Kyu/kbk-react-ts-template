@@ -1,10 +1,8 @@
+import { Logo, SystemIcon } from "@/components/common/index.ts";
+import { HeaderProps } from "@/components/Header/types.ts";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-interface HeaderProps {
-  isLoggedIn: boolean;
-  username?: string;
-}
 // TODO: 햄버거 메뉴 오픈 시 반응형이 풀림
 const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,9 +12,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
       <div className="mx-auto flex min-h-[88px] items-center justify-between px-[72px]">
         {/* 로고 */}
         <div className="flex items-center">
-          <Link to="/" className="text-xl font-bold">
-            logologo
-          </Link>
+          <Logo />
         </div>
 
         {/* 모바일 메뉴 버튼 */}
@@ -24,33 +20,20 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex items-center desktop:hidden"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <SystemIcon name="bars" size={16} />
         </button>
 
         {/* 데스크톱 메뉴 */}
         <nav className="hidden items-center space-x-4 desktop:flex">
           {isLoggedIn ? (
             <>
-              <Link to="/link1" className="text-gray-700 hover:text-primary">
+              <Link to="/link1" className="hover:text-primary text-gray-700">
                 Nav Link
               </Link>
-              <Link to="/link2" className="text-gray-700 hover:text-primary">
+              <Link to="/link2" className="hover:text-primary text-gray-700">
                 Nav Link
               </Link>
-              <Link to="/link3" className="text-gray-700 hover:text-primary">
+              <Link to="/link3" className="hover:text-primary text-gray-700">
                 Nav Link
               </Link>
               <div className="relative">
@@ -75,13 +58,13 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
             <>
               <Link
                 to="/login"
-                className="rounded bg-primary px-4 py-2 text-white"
+                className="bg-primary rounded px-4 py-2 text-white"
               >
                 Log in
               </Link>
               <Link
                 to="/register"
-                className="rounded bg-secondary px-4 py-2 text-gray-800"
+                className="bg-secondary rounded px-4 py-2 text-gray-800"
               >
                 Register
               </Link>
@@ -152,7 +135,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
                 <li>
                   <Link
                     to="/link1"
-                    className="block text-gray-700 hover:text-primary"
+                    className="hover:text-primary block text-gray-700"
                   >
                     Nav Link
                   </Link>
@@ -160,7 +143,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
                 <li>
                   <Link
                     to="/link2"
-                    className="block text-gray-700 hover:text-primary"
+                    className="hover:text-primary block text-gray-700"
                   >
                     Nav Link
                   </Link>
@@ -168,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
                 <li>
                   <Link
                     to="/link3"
-                    className="block text-gray-700 hover:text-primary"
+                    className="hover:text-primary block text-gray-700"
                   >
                     Nav Link
                   </Link>
@@ -181,7 +164,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
                 <li>
                   <Link
                     to="/login"
-                    className="block w-full rounded bg-primary px-4 py-2 text-center text-white"
+                    className="bg-primary block w-full rounded px-4 py-2 text-center text-white"
                   >
                     Log in
                   </Link>
@@ -189,7 +172,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
                 <li>
                   <Link
                     to="/register"
-                    className="block w-full rounded bg-secondary px-4 py-2 text-center text-gray-800"
+                    className="bg-secondary block w-full rounded px-4 py-2 text-center text-gray-800"
                   >
                     Register
                   </Link>

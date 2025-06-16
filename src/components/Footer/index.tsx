@@ -1,127 +1,60 @@
-import { Link } from "react-router-dom";
+import { Typography, SystemIcon, Link } from "@/components/common";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-white py-8 shadow-inner">
-      <div className="container mx-auto px-4">
-        {/* 로고 및 소셜 미디어 */}
-        <div className="desktop:flex-row desktop:items-center flex flex-col items-start justify-between">
-          <div className="desktop:mb-0 mb-8">
-            <h1 className="mb-4 text-xl font-bold">logologo</h1>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="hover:text-primary text-gray-600"
-              >
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="#"
-                aria-label="Github"
-                className="hover:text-primary text-gray-600"
-              >
-                <i className="fab fa-github"></i>
-              </a>
-              <a
-                href="#"
-                aria-label="Email"
-                className="hover:text-primary text-gray-600"
-              >
-                <i className="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-
-          {/* 네비게이션 링크 */}
-          <div className="desktop:grid-cols-4 grid grid-cols-1 gap-8">
-            <div>
-              <h2 className="mb-4 font-semibold text-gray-700">Title</h2>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="mb-4 font-semibold text-gray-700">Title</h2>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="mb-4 font-semibold text-gray-700">Title</h2>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:text-primary text-gray-600">
-                    Nav Link
-                  </Link>
-                </li>
-              </ul>
-            </div>
+    <footer className="border-t border-gray-400 bg-white text-gray-800">
+      <div className="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-8 px-4 py-10 md:grid-cols-5 md:py-12">
+        {/* Left Logo and Icons */}
+        <div className="md:col-span-1">
+          <Link to="/" className="text-xl font-bold text-black">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="order-1 h-[40px] w-[160px] flex-none grow-0"
+            />
+          </Link>
+          <div className="mb-6 mt-6 flex space-x-4">
+            <SystemIcon name="linkedin" size={20} className="text-gray-400" />
+            <SystemIcon name="github" size={20} className="text-gray-400" />
+            <SystemIcon
+              name="envelope-outline"
+              size={20}
+              className="text-gray-400"
+            />
           </div>
         </div>
 
-        {/* 저작권 */}
-        <div className="mt-8 border-t pt-4 text-center text-sm text-gray-600">
-          © Sonia Liou 2022
-        </div>
+        {/* Navigation Columns */}
+        {[1, 2, 3, 4].map((col) => (
+          <div key={col} className="space-y-2">
+            <Typography variant="h5" className="mb-2 text-gray-400">
+              Title
+            </Typography>
+            <ul className="space-y-1">
+              <li>
+                <a href="#" className="text-gray-400 hover:underline">
+                  Nav Link
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:underline">
+                  Nav Link
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:underline">
+                  Nav Link
+                </a>
+              </li>
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Copyright */}
+      <div className="flex justify-end border-t border-gray-200 px-4 py-4 text-sm text-gray-500 md:px-10">
+        <span className="hidden md:inline-block">© DEV KBK 2025</span>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

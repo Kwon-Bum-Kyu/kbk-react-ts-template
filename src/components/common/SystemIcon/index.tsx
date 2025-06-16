@@ -35,6 +35,9 @@ import {
   FaRegCheckCircle,
   FaSquare,
   FaRegSquare,
+  FaLinkedin,
+  FaGithub,
+  FaGlobe,
 } from "react-icons/fa";
 
 const iconMap: Record<
@@ -72,6 +75,9 @@ const iconMap: Record<
   "check-circle-outline": FaRegCheckCircle,
   square: FaSquare,
   "square-outline": FaRegSquare,
+  linkedin: FaLinkedin,
+  github: FaGithub,
+  globe: FaGlobe,
 };
 
 const SystemIcon: React.FC<SystemIconProps> = ({

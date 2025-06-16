@@ -14,6 +14,7 @@ import Tabs from "./Tabs";
 import Pagenation from "./Pagenation";
 import SystemIcon from "./SystemIcon";
 import Empty from "./Empty";
+import Logo from "./Logo";
 
 export {
   Button,
@@ -33,4 +34,5 @@ export {
   Pagenation,
   SystemIcon,
   Empty,
+  Logo,
 };
