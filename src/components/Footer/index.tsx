@@ -1,4 +1,20 @@
 import { Typography, SystemIcon, Link } from "@/components/common";
+import { SystemIconName } from "@/components/common/SystemIcon/types.tsx";
+
+const icons: { to: string; iconName: SystemIconName }[] = [
+  {
+    iconName: "linkedin",
+    to: "https://www.linkedin.com/in/bumkyu98/",
+  },
+  {
+    iconName: "github",
+    to: "https://github.com/Kwon-Bum-Kyu",
+  },
+  {
+    iconName: "envelope-outline",
+    to: "mailto:missing107@gmail.com",
+  },
+];
 
 export default function Footer() {
   return (
@@ -14,13 +30,15 @@ export default function Footer() {
             />
           </Link>
           <div className="mb-6 mt-6 flex space-x-4">
-            <SystemIcon name="linkedin" size={20} className="text-gray-400" />
-            <SystemIcon name="github" size={20} className="text-gray-400" />
-            <SystemIcon
-              name="envelope-outline"
-              size={20}
-              className="text-gray-400"
-            />
+            {icons.map((icon) => (
+              <Link key={icon.iconName} to={icon.to}>
+                <SystemIcon
+                  name={icon.iconName}
+                  size={20}
+                  className="text-gray-400"
+                />
+              </Link>
+            ))}
           </div>
         </div>
 
