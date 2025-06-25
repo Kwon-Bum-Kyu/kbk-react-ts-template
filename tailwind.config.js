@@ -4,9 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
-      },
+      fontFamily: { sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans] },
       fontSize: {
         xs: "12px",
         sm: "14px",
@@ -28,16 +26,18 @@ export default {
       },
       colors: {
         blue: {
-          50: "#E1E9EF",
-          100: "#B5CBD6",
-          200: "#84A3BB",
-          300: "#527EA0",
-          400: "#2D63BB",
-          500: "#084777",
-          600: "#07406F",
+          // 50: "#E1E9EF",
+          // 100: "#B5CBD6",
+          // 200: "#84A3BB",
+          // 300: "#527EA0",
+          // 400: "#2D63BB",
+          // 500: "#084777",
+          // 600: "#07406F",
+          // 700: "#663764",
+          // 800: "#042F5A",
+          // 900: "#022047",
+          ...defaultTheme.colors.blue,
           700: "#663764",
-          800: "#042F5A",
-          900: "#022047",
         },
         gray: {
           50: "#E7E7E6",
@@ -57,10 +57,7 @@ export default {
           white: "#FFFFFF", // Primary Background
         },
       },
-      spacing: {
-        16: "16px",
-        80: "80px",
-      },
+      spacing: { 16: "16px", 80: "80px" },
       screens: {
         mobile: "640px", // 모바일
         tablet: "768px", // 태블릿
