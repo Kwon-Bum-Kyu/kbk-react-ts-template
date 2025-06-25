@@ -36,8 +36,6 @@ export default {
           // 700: "#663764",
           // 800: "#042F5A",
           // 900: "#022047",
-          ...defaultTheme.colors.blue,
-          700: "#663764",
         },
         gray: {
           50: "#E7E7E6",
