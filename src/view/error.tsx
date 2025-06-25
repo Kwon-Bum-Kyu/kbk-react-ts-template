@@ -39,7 +39,7 @@ const ErrorPage = ({ isError, className }: ErrorPageProps) => {
     <div
       id="error-page"
       className={cn(
-        "flex h-[100vh] w-[100vw] flex-col items-center justify-center text-center",
+        "flex h-screen w-screen flex-col items-center justify-center text-center",
         className,
       )}
     >

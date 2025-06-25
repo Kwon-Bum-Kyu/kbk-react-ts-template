@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-gray-400 bg-white text-gray-800">
       <div className="w-full px-4 py-10 md:py-12">
-        <div className="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-8 px-4 md:grid-cols-5">
+        <div className="mx-auto grid w-full max-w-(--breakpoint-xl) grid-cols-1 gap-8 px-4 md:grid-cols-5">
           {/* Left Logo and Icons */}
           <div className="md:col-span-1">
             <Logo />

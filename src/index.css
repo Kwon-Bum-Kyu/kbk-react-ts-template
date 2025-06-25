@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
 :root {
   --rdp-accent-color: #084777;
   --rdp-background-color: #e1e9ef;

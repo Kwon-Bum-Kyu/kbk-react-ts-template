@@ -6,7 +6,7 @@ import { Typography } from "@/components/common/index.ts";
 function App() {
   return (
     <Suspense fallback={<Typography variant="h1">Loading...</Typography>}>
-      <main className={`min-h-[100vh] min-w-[100vh]`}>
+      <main className={`min-h-screen min-w-[100vh]`}>
         <Outlet />
       </main>
     </Suspense>
