@@ -8,21 +8,21 @@
 
 /* 날짜 선택 스타일 */
 .rdp-day_selected {
-  @apply bg-blue-700 font-semibold text-white;
+  /* @apply bg-blue-700 font-semibold text-white; */
 }
 .rdp-day_range_start,
 .rdp-day_range_end {
-  @apply bg-blue-700 font-bold text-white;
+  /* @apply bg-blue-700 font-bold text-white; */
 }
 .rdp-day_range_middle {
-  @apply bg-blue-100 text-blue-700;
+  /* @apply bg-blue-100 text-blue-700; */
 }
 .rdp-caption_label {
-  @apply text-base font-semibold;
+  /* @apply text-base font-semibold; */
 }
 .rdp-day_today {
-  @apply border border-blue-500;
+  /* @apply border border-blue-500; */
 }
 .rdp {
-  @apply text-sm;
+  /* @apply text-sm; */
 }
