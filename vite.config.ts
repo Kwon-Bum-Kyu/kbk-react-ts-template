@@ -8,4 +8,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  define: {
+    "process.env": {}, // Vite 7에서 Storybook 대응
+  },
 });

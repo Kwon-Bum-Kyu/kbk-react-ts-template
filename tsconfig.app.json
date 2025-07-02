@@ -28,5 +28,5 @@
       "@/common": ["./src/components/common/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "stories"]
 }
