@@ -14,6 +14,7 @@ import { MemoryRouter } from "react-router-dom";
 const meta: Meta<typeof Header> = {
   title: "Common/Header",
   component: Header,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <MemoryRouter>
@@ -25,8 +26,7 @@ const meta: Meta<typeof Header> = {
     layout: "fullscreen",
     docs: {
       description: {
-        component:
-          "사이트의 상단 내비게이션 컴포넌트입니다. 로그인 여부에 따라 메뉴 항목이 다르게 렌더링됩니다.",
+        component: `Header 컴포넌트는 사이트 상단 네비게이션 역할을 하며 로그인 상태에 따라 메뉴를 다르게 표시합니다.`,
       },
     },
   },
@@ -70,7 +70,7 @@ export const LoggedOut: Story = {
     docs: {
       description: {
         story:
-          "🚪 로그아웃 상태의 헤더 UI입니다. 로그인/회원가입 버튼이 표시됩니다.",
+          "로그아웃 상태의 헤더 UI입니다. 로그인/회원가입 버튼이 표시됩니다.",
       },
     },
   },

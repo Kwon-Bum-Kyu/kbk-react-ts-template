@@ -6,6 +6,7 @@ import { MemoryRouter } from "react-router-dom";
 const meta: Meta<typeof Footer> = {
   title: "Common/Footer",
   component: Footer,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

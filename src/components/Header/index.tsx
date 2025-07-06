@@ -19,6 +19,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex items-center desktop:hidden"
+          aria-label="Open menu"
         >
           <SystemIcon name="bars" size={16} />
         </button>
