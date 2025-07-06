@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Empty from "@/components/common/Empty";
 import type { EmptyProps } from "@/components/common/Empty/types.tsx";
 

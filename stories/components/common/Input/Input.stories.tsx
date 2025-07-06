@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Input from "@/components/common/Input";
 import type { InputProps } from "@/components/common/Input/types.ts";
 

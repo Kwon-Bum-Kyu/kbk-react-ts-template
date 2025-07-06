@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Link from "@/components/common/Link";
 import type { LinkProps } from "@/components/common/Link/types.ts";
 import { MemoryRouter } from "react-router-dom";

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import DatePicker from "@/components/common/DatePicker";
 import type { DatePickerProps } from "@/components/common/DatePicker/types.ts";
 import { useState } from "react";

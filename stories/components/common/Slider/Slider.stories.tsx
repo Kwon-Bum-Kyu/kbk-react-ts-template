@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Slider from "@/components/common/Slider";
 import type { SliderProps } from "@/components/common/Slider/types.ts";
 import { useState } from "react";

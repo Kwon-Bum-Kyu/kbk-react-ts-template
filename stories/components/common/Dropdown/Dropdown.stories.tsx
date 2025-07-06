@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Dropdown from "@/components/common/Dropdown";
 import type { DropdownProps } from "@/components/common/Dropdown/types.ts";
 

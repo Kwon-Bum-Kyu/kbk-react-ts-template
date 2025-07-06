@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import SystemIcon from "@/components/common/SystemIcon";
 import type { SystemIconProps } from "@/components/common/SystemIcon/types.tsx";
 

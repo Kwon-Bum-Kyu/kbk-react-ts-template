@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Button from "@/components/common/Button";
 import type { ButtonProps } from "@/components/common/Button/types.ts";
 

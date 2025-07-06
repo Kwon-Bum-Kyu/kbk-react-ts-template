@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Pagination from "@/components/common/Pagenation";
 import type { PaginationProps } from "@/components/common/Pagenation/types.ts";
 import { useState } from "react";
@@ -13,7 +13,8 @@ const meta: Meta<typeof Pagination> = {
   parameters: {
     docs: {
       description: {
-        component: "페이지네이션 UI를 제공하여 콘텐츠를 나вига이션하는 컴포넌트입니다.",
+        component:
+          "페이지네이션 UI를 제공하여 콘텐츠를 나вига이션하는 컴포넌트입니다.",
       },
     },
   },
