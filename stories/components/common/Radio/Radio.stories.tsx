@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Radio from "@/components/common/Radio";
 import type { RadioProps } from "@/components/common/Radio/types.ts";
-import React from "react";
 
 /**
  * Radio 컴포넌트는 여러 옵션 중 하나만 선택할 수 있도록 하는 UI 요소입니다.
@@ -14,7 +13,8 @@ const meta: Meta<typeof Radio> = {
   parameters: {
     docs: {
       description: {
-        component: "여러 옵션 중 하나를 선택하기 위한 라디오 버튼 컴포넌트입니다.",
+        component:
+          "여러 옵션 중 하나를 선택하기 위한 라디오 버튼 컴포넌트입니다.",
       },
     },
   },
@@ -94,14 +94,21 @@ export const RadioGroup: Story = {
   render: (args) => (
     <div role="radiogroup" className="flex flex-col space-y-2">
       <Radio {...args} label="Option 1" value="1" name="story-radio-group" />
-      <Radio {...args} label="Option 2" value="2" name="story-radio-group" checked />
+      <Radio
+        {...args}
+        label="Option 2"
+        value="2"
+        name="story-radio-group"
+        checked
+      />
       <Radio {...args} label="Option 3" value="3" name="story-radio-group" />
     </div>
   ),
   parameters: {
     docs: {
       description: {
-        story: "라디오 버튼 그룹 예시입니다. `name` 속성을 공유하여 그룹으로 동작합니다.",
+        story:
+          "라디오 버튼 그룹 예시입니다. `name` 속성을 공유하여 그룹으로 동작합니다.",
       },
     },
   },
