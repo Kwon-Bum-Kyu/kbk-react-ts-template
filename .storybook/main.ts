@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
     "@chromatic-com/storybook",
     "@storybook/addon-onboarding",
+    "@storybook/addon-vitest"
   ],
   core: {
     builder: "@storybook/builder-vite",

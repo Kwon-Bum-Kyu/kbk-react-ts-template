@@ -6,6 +6,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["@vitest/browser/matchers"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -24,9 +25,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/img": ["./src/assets/img/*"],
-      "@/common": ["./src/components/common/*"]
+      "@/img/*": ["./src/assets/img/*"],
+      "@/common": ["./src/components/common/*"],
+      "@/stories/*": ["./stories/*"]
     }
   },
-  "include": ["src", "stories"]
+  "include": ["src", "stories", "tests"]
 }
