@@ -21,13 +21,13 @@ export default mergeConfig(
     ],
     test: {
       name: "storybook",
-      environment: "browser",
       setupFiles: ["./.storybook/vitest.setup.ts"],
       browser: {
         enabled: true,
         provider: "playwright",
         headless: true,
         instances: [{ browser: "chromium" }],
+        name: "chromium", // 충돌 방지
       },
     },
   }),
