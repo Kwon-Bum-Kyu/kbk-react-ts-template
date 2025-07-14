@@ -30,8 +30,8 @@ type Story = StoryObj<typeof ButtonGroup>;
 export const TextButtons: Story = {
   args: {
     buttons: [
-      { label: "First", onClick: () => alert("Clicked First") },
-      { label: "Second", onClick: () => alert("Clicked Second") },
+      { label: "First", onClick: () => alert("테스트1") },
+      { label: "Second", onClick: () => alert("테스트2") },
       { label: "Third", disabled: true },
     ],
   } as ButtonGroupProps,
@@ -41,7 +41,10 @@ export const IconButtons: Story = {
   args: {
     buttons: [
       { label: <SystemIcon name="arrow-left" />, onClick: () => alert("Left") },
-      { label: <SystemIcon name="arrow-right" />, onClick: () => alert("Right") },
+      {
+        label: <SystemIcon name="arrow-right" />,
+        onClick: () => alert("Right"),
+      },
       {
         label: <SystemIcon name="close" />,
         onClick: () => alert("Close"),

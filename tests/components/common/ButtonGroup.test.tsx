@@ -9,9 +9,9 @@ describe("ButtonGroup 컴포넌트", () => {
   describe("TextButtons", () => {
     it("모든 버튼이 렌더링되어야 한다.", () => {
       render(<TextButtons />);
-      expect(screen.getByText("First")).toBeInTheDocument();
-      expect(screen.getByText("Second")).toBeInTheDocument();
-      expect(screen.getByText("Third")).toBeInTheDocument();
+      expect(screen.getByText("first")).toBeInTheDocument();
+      expect(screen.getByText("second")).toBeInTheDocument();
+      expect(screen.getByText("third")).toBeInTheDocument();
     });
 
     it("play 함수가 실행되어도 예외 없이 동작해야 한다.", async () => {

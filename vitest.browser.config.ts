@@ -21,7 +21,7 @@ export default mergeConfig(
     ],
     test: {
       name: "storybook",
-      environment: "jsdom",
+      environment: "browser",
       setupFiles: ["./.storybook/vitest.setup.ts"],
       browser: {
         enabled: true,
