@@ -32,7 +32,8 @@ const meta: Meta<typeof Input> = {
       control: { type: "text" },
     },
     errorMessage: {
-      description: "오류 상태일 때 표시될 메시지입니다. 이 값이 있으면 오류 스타일이 적용됩니다.",
+      description:
+        "오류 상태일 때 표시될 메시지입니다. 이 값이 있으면 오류 스타일이 적용됩니다.",
       control: { type: "text" },
     },
     disabled: {
@@ -55,7 +56,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "기본적인 Input 컴포넌트의 예시입니다. 레이블과 보조 텍스트를 포함합니다.",
+        story:
+          "기본적인 Input 컴포넌트의 예시입니다. 레이블과 보조 텍스트를 포함합니다.",
       },
     },
   },
@@ -68,10 +70,11 @@ export const WithError: Story = {
     errorMessage: "Error message",
     disabled: false,
   } as InputProps,
-    parameters: {
+  parameters: {
     docs: {
       description: {
-        story: "오류 상태의 Input 컴포넌트입니다. `errorMessage`가 제공되면 테두리가 빨갛게 변합니다.",
+        story:
+          "오류 상태의 Input 컴포넌트입니다. `errorMessage`가 제공되면 테두리가 빨갛게 변합니다.",
       },
     },
   },
@@ -83,10 +86,11 @@ export const Disabled: Story = {
     placeholder: "Text input",
     disabled: true,
   } as InputProps,
-    parameters: {
+  parameters: {
     docs: {
       description: {
-        story: "비활성화된 상태의 Input 컴포넌트입니다. 사용자는 이 필드와 상호작용할 수 없습니다.",
+        story:
+          "비활성화된 상태의 Input 컴포넌트입니다. 사용자는 이 필드와 상호작용할 수 없습니다.",
       },
     },
   },

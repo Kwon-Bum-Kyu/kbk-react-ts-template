@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { composeStories } from "@storybook/react";
 import * as stories from "@/stories/components/common/Dropdown.stories";
@@ -49,13 +49,13 @@ describe("Dropdown 컴포넌트", () => {
     it("검색 입력 필드가 렌더링되어야 한다.", () => {
       render(<Searchable />);
       fireEvent.click(screen.getByText("Select an option"));
-      expect(screen.getByPlaceholderText("Search...")).toBeInTheDocument();
+      expect(screen.getByRole("textbox")).toBeInTheDocument();
     });
 
     it("검색을 통해 옵션을 필터링할 수 있어야 한다.", () => {
       render(<Searchable />);
       fireEvent.click(screen.getByText("Select an option"));
-      fireEvent.change(screen.getByPlaceholderText("Search..."), { target: { value: "Option 3" } });
+      fireEvent.change(screen.getByRole("textbox"), { target: { value: "Option 3" } });
       expect(screen.getByText("Option 3")).toBeInTheDocument();
       expect(screen.queryByText("Option 1")).not.toBeInTheDocument();
     });

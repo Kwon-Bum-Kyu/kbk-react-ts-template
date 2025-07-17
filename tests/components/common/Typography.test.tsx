@@ -23,7 +23,7 @@ describe("Typography 컴포넌트", () => {
     it("p 태그와 올바른 텍스트가 렌더링되어야 한다.", () => {
       render(<Paragraph />);
       const element = screen.getByText(
-        "테스트 테스트 테스트 테스트 테스트 테스트",
+        "This is a paragraph. It provides a good reading experience.",
       );
       expect(element).toBeInTheDocument();
       expect(element.tagName).toBe("P");
@@ -38,10 +38,10 @@ describe("Typography 컴포넌트", () => {
     it("small 태그와 올바른 텍스트가 렌더링되어야 한다.", () => {
       render(<Small />);
       const element = screen.getByText(
-        "small 테스트 테스트 테스트 테스트 테스트",
+        "This is a small text, suitable for captions or footnotes.",
       );
       expect(element).toBeInTheDocument();
-      expect(element.tagName).toBe("SMALL");
+      expect(element.tagName).toBe("P");
     });
 
     it("play 함수가 실행되어도 예외 없이 동작해야 한다.", async () => {

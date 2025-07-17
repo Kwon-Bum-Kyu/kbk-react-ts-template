@@ -47,6 +47,7 @@ export const Default: Story = {
     name: "story-radio-1",
     checked: false,
     disabled: false,
+    onChange: () => {},
   } as RadioProps,
   parameters: {
     docs: {
@@ -63,6 +64,7 @@ export const Checked: Story = {
     name: "story-radio-2",
     checked: true,
     disabled: false,
+    onChange: () => {},
   } as RadioProps,
   parameters: {
     docs: {
@@ -79,6 +81,7 @@ export const Disabled: Story = {
     name: "story-radio-3",
     checked: false,
     disabled: true,
+    onChange: () => {},
   } as RadioProps,
   parameters: {
     docs: {
@@ -93,15 +96,16 @@ export const Disabled: Story = {
 export const RadioGroup: Story = {
   render: (args) => (
     <div role="radiogroup" className="flex flex-col space-y-2">
-      <Radio {...args} label="Option 1" value="1" name="story-radio-group" />
+      <Radio {...args} label="Option 1" value="1" name="story-radio-group" onChange={() => {}} />
       <Radio
         {...args}
         label="Option 2"
         value="2"
         name="story-radio-group"
         checked
+        onChange={() => {}}
       />
-      <Radio {...args} label="Option 3" value="3" name="story-radio-group" />
+      <Radio {...args} label="Option 3" value="3" name="story-radio-group" onChange={() => {}} />
     </div>
   ),
   parameters: {

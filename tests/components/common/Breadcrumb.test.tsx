@@ -17,10 +17,21 @@ describe("Breadcrumb 컴포넌트", () => {
 
     it("마지막 항목을 제외한 모든 항목에 링크가 있어야 한다.", () => {
       render(<Default />);
-      expect(screen.getByText("Home").closest("a")).toHaveAttribute("href", "/");
-      expect(screen.getByText("Docs").closest("a")).toHaveAttribute("href", "/docs");
-      expect(screen.getByText("Components").closest("a")).toHaveAttribute("href", "/docs/components");
-      expect(screen.getByText("Breadcrumb").closest("a")).not.toBeInTheDocument();
+      expect(screen.getByText("Home").closest("a")).toHaveAttribute(
+        "href",
+        "/",
+      );
+      expect(screen.getByText("Docs").closest("a")).toHaveAttribute(
+        "href",
+        "/docs",
+      );
+      expect(screen.getByText("Components").closest("a")).toHaveAttribute(
+        "href",
+        "/docs/components",
+      );
+      expect(
+        screen.getByText("Breadcrumb").closest("a"),
+      ).not.toBeInTheDocument();
     });
 
     it("play 함수가 실행되어도 예외 없이 동작해야 한다.", async () => {

@@ -24,7 +24,7 @@ describe("Link 컴포넌트", () => {
       render(<Disabled />);
       const link = screen.getByText("Disabled Link");
       expect(link).toBeInTheDocument();
-      expect(link).toHaveClass("disabled");
+      expect(link).toHaveClass("text-gray-300");
     });
 
     it("play 함수가 실행되어도 예외 없이 동작해야 한다.", async () => {

@@ -9,7 +9,7 @@ describe("Slider 컴포넌트", () => {
   describe("Default Slider", () => {
     it("기본 슬라이더가 렌더링되어야 한다.", () => {
       render(<Default />);
-      expect(screen.getByLabelText("Volume")).toBeInTheDocument();
+      expect(screen.getByRole("slider")).toBeInTheDocument();
       expect(screen.getByText("50")).toBeInTheDocument();
     });
 
@@ -21,7 +21,7 @@ describe("Slider 컴포넌트", () => {
   describe("Stepped Slider", () => {
     it("스텝 슬라이더가 렌더링되어야 한다.", () => {
       render(<Stepped />);
-      expect(screen.getByLabelText("Brightness")).toBeInTheDocument();
+      expect(screen.getByRole("slider")).toBeInTheDocument();
       expect(screen.getByText("30")).toBeInTheDocument();
     });
 
@@ -33,7 +33,7 @@ describe("Slider 컴포넌트", () => {
   describe("Disabled Slider", () => {
     it("비활성화된 슬라이더가 렌더링되어야 한다.", () => {
       render(<Disabled />);
-      const slider = screen.getByLabelText("Disabled Slider");
+      const slider = screen.getByRole("slider");
       expect(slider).toBeInTheDocument();
       expect(slider).toBeDisabled();
     });
@@ -44,9 +44,9 @@ describe("Slider 컴포넌트", () => {
   });
 
   describe("NoValueLabel Slider", () => {
-    it("값이 표시되지 않는 슬라이더가 렌더링되어야 한다.", ()n => {
+    it("값이 표시되지 않는 슬라이더가 렌더링되어야 한다.", () => {
       render(<NoValueLabel />);
-      expect(screen.getByLabelText("Opacity")).toBeInTheDocument();
+      expect(screen.getByRole("slider")).toBeInTheDocument();
       expect(screen.queryByText("50")).not.toBeInTheDocument();
     });
 

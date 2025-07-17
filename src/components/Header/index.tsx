@@ -18,14 +18,17 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
         {/* 모바일 메뉴 버튼 */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex items-center desktop:hidden"
+          className="desktop:hidden flex items-center"
           aria-label="Open menu"
         >
           <SystemIcon name="bars" size={16} />
         </button>
 
         {/* 데스크톱 메뉴 */}
-        <nav className="hidden items-center space-x-4 desktop:flex">
+        <nav
+          className="desktop:flex hidden items-center space-x-4"
+          role="navigation"
+        >
           {isLoggedIn ? (
             <>
               <Link to="/link1" className="hover:text-primary text-gray-700">
@@ -77,14 +80,14 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
       {/* 딤 배경 */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50"
+          className="bg-opacity-50 fixed inset-0 z-40 bg-black"
           onClick={() => setIsMenuOpen(false)}
         ></div>
       )}
 
       {/* 모바일 메뉴 */}
       <div
-        className={`fixed left-0 top-0 z-50 h-full w-3/4 max-w-xs transform bg-white shadow-lg transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-50 h-full w-3/4 max-w-xs transform bg-white shadow-lg transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -112,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, username }) => {
           </button>
         </div>
 
-        <nav className="p-4">
+        <nav className="p-4" role="navigation">
           {isLoggedIn ? (
             <>
               <div className="mb-4 flex items-center space-x-2">

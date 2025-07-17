@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
       <input
         disabled={disabled}
         className={clsx(
-          "rounded border px-3 py-2 text-sm outline-none transition-colors",
+          "rounded border px-3 py-2 text-sm transition-colors outline-none",
           "placeholder-gray-400",
           disabled
             ? "cursor-not-allowed border-gray-100 bg-gray-100 text-gray-400"
@@ -35,7 +35,7 @@ const Input: React.FC<InputProps> = ({
 
       {/* 보조 텍스트 or 에러 메시지 */}
       {hasError ? (
-        <p className="text-xs text-system-red">{errorMessage}</p>
+        <p className="text-system-red text-xs">{errorMessage}</p>
       ) : assistiveText ? (
         <p className="text-xs text-gray-400">{assistiveText}</p>
       ) : null}

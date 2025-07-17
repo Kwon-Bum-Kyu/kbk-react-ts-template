@@ -40,6 +40,7 @@ export const Default: Story = {
     label: "Checkbox Label",
     checked: false,
     disabled: false,
+    onChange: () => {},
   } as CheckboxProps,
   parameters: {
     docs: {
@@ -55,6 +56,7 @@ export const Checked: Story = {
     label: "Checkbox Label",
     checked: true,
     disabled: false,
+    onChange: () => {},
   } as CheckboxProps,
   parameters: {
     docs: {
@@ -70,6 +72,7 @@ export const Disabled: Story = {
     label: "Checkbox Label",
     checked: false,
     disabled: true,
+    onChange: () => {},
   } as CheckboxProps,
   parameters: {
     docs: {
@@ -85,6 +88,7 @@ export const DisabledChecked: Story = {
     label: "Checkbox Label",
     checked: true,
     disabled: true,
+    onChange: () => {},
   } as CheckboxProps,
   parameters: {
     docs: {
