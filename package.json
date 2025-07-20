@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "test-storybook": "vitest --project=storybook",
-    "test:browser": "vitest --config=vitest.browser.config.ts"
+    "storybook": "npx storybook dev -p 6006"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -25,9 +25,10 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
     "@eslint/js": "^9.29.0",
+    "@storybook/addon-a11y": "^9.0.17",
     "@storybook/addon-docs": "^9.0.14",
     "@storybook/addon-onboarding": "^9.0.14",
-    "@storybook/addon-vitest": "^9.0.15",
+    "@storybook/addon-vitest": "^9.0.17",
     "@storybook/builder-vite": "^9.0.14",
     "@storybook/react-vite": "^9.0.14",
     "@tailwindcss/postcss": "^4.1.10",
