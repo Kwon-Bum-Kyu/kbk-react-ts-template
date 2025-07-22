@@ -18,28 +18,19 @@ Vite, Tailwind CSS, Storybook, 포괄적인 테스팅 환경을 포함한 현대
 - Node.js (18 버전 이상)
 - npm 또는 yarn
 
-## 🛠️ 설치 및 설정
+## 🛠️ 템플릿 사용 방법
 
-1. **저장소 클론:**
+### 방법 1: degit 사용 (권장)
 
-   ```bash
-   git clone <repository-url>
-   cd kbk-react-ts-template
-   ```
+```bash
+# degit를 사용한 프로젝트 생성
+npx degit Kwon-Bum-Kyu/kbk-react-ts-template my-project
+cd my-project
+npm install
+npm run dev
+```
 
-2. **의존성 설치:**
-
-   ```bash
-   npm install
-   ```
-
-3. **개발 서버 시작:**
-
-   ```bash
-   npm run dev
-   ```
-
-   앱이 `http://localhost:5173`에서 실행됩니다
+모든 방법으로 생성된 프로젝트는 `http://localhost:5173`에서 실행됩니다.
 
 ## 📜 사용 가능한 스크립트
 
