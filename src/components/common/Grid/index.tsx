@@ -1,9 +1,10 @@
 import { GridItemProps, GridProps } from "@/components/common/Grid/types.ts";
 import React from "react";
+import { cn } from "@/utils/tailwind";
 
 const Grid: React.FC<GridProps> = ({ children }) => {
   return (
-    <div className="grid grid-cols-4 gap-4 px-4 tablet:grid-cols-6 tablet:px-8 desktop:grid-cols-12 desktop:px-16">
+    <div className="tablet:grid-cols-6 tablet:px-8 desktop:grid-cols-12 desktop:px-16 grid grid-cols-4 gap-4 px-4">
       {children}
     </div>
   );
@@ -11,9 +12,7 @@ const Grid: React.FC<GridProps> = ({ children }) => {
 
 const GridItem: React.FC<GridItemProps> = ({ children, className = "" }) => {
   return (
-    <div
-      className={`flex h-16 items-center justify-center font-medium ${className}`}
-    >
+    <div className={cn("flex items-center justify-center", className)}>
       {children}
     </div>
   );

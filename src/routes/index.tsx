@@ -2,11 +2,12 @@ import App from "@/App.tsx";
 import Rootlayout from "@/components/layouts/rootLayout.tsx";
 import ErrorPage from "@/view/error.tsx";
 import Guide from "@/view/guide.tsx";
+import ApiTest from "@/view/apiTest.tsx";
 import { createBrowserRouter } from "react-router-dom";
 
 export const ROUTES = {
   root: "/",
-  guide: "/guide",
+  apiTest: "/api-test",
   error: "/error",
 };
 
@@ -18,7 +19,10 @@ export const router = createBrowserRouter([
     children: [
       {
         element: <Rootlayout />,
-        children: [{ path: ROUTES.guide, element: <Guide /> }],
+        children: [
+          { index: true, element: <Guide /> },
+          { path: ROUTES.apiTest, element: <ApiTest /> },
+        ],
       },
       { path: ROUTES.error, element: <ErrorPage /> },
     ],

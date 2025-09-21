@@ -1,11 +1,13 @@
 import { ButtonProps } from "@/components/common/Button/types.ts";
 import React from "react";
+import { cn } from "@/utils/tailwind";
 
 const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   children,
-  onClick,
+  className,
   disabled = false,
+  ...props
 }) => {
   const baseStyles =
     "px-4 py-2 rounded-md font-semibold focus:outline-none transition-colors duration-150";
@@ -21,9 +23,9 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant]}`}
-      onClick={disabled ? undefined : onClick}
+      className={cn(baseStyles, variantStyles[variant], className)}
       disabled={disabled}
+      {...props}
     >
       {children}
     </button>
