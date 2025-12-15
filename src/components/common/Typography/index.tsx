@@ -20,7 +20,7 @@ const Typography: React.FC<TypographyProps> = ({
   children,
 }) => {
   // HTML 태그 매핑
-  const Tag: keyof JSX.IntrinsicElements = [
+  const Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" = [
     "h1",
     "h2",
     "h3",
@@ -28,7 +28,7 @@ const Typography: React.FC<TypographyProps> = ({
     "h5",
     "h6",
   ].includes(variant)
-    ? (variant as keyof JSX.IntrinsicElements) // h1~h6는 그대로 사용
+    ? (variant as "h1" | "h2" | "h3" | "h4" | "h5" | "h6") // h1~h6는 그대로 사용
     : "p"; // 나머지는 p 태그 사용
 
   return (
