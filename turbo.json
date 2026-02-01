@@ -1,0 +1,40 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "storybook-static/**"],
+      "env": ["NODE_ENV"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": ["^build", "@repo/vitest-config#build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**", "test/**", "tests/**", "**/*.test.ts", "**/*.test.tsx"],
+      "passThroughEnv": ["PLAYWRIGHT_*", "CI"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "migrate": {
+      "inputs": ["migrations/**/*.sql"],
+      "cache": false
+    }
+  },
+  "remoteCache": {
+    "enabled": true,
+    "signature": true
+  }
+}

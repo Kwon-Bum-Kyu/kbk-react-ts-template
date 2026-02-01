@@ -23,5 +23,21 @@ dist-ssr
 *.sln
 *.sw?
 
-# test result
+
+# Testing & Coverage
 __screenshots__
+.DS_Store
+.turbo
+.env*
+.cache
+server/dist
+public/dist
+coverage/
+playwright-report/
+test-results/
+.nyc_output/
+storybook-static/
+
+# Misc
+*.tsbuildinfo
+*.eslintcache
