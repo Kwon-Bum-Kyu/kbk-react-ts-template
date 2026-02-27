@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid, GridItem } from "@/common";
+import { Grid, GridItem } from "@repo/ui";
 
 const meta: Meta<typeof Grid> = {
   title: "Common/Grid",

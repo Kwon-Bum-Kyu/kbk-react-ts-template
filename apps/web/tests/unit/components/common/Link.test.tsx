@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Link from "@/components/common/Link";
+import { Link } from "@repo/ui";
 
 describe("Link 컴포넌트", () => {
   const renderLink = (props: { to: string; children: React.ReactNode; disabled?: boolean }) => {

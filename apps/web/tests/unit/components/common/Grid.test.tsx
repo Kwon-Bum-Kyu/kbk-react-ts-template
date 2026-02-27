@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Grid, GridItem } from "@/components/common/Grid";
+import { Grid, GridItem } from "@repo/ui";
 
 describe("Grid 컴포넌트", () => {
   it("그리드 아이템들이 올바르게 렌더링되어야 한다.", () => {

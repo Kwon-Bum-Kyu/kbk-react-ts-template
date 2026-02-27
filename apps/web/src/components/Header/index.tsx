@@ -1,4 +1,4 @@
-import { Logo, SystemIcon } from "@/components/common";
+import { Logo, SystemIcon } from "@repo/ui";
 import { HeaderProps } from "@/components/Header/types.ts";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";

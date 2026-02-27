@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Logo from "@/components/common/Logo";
+import { Logo } from "@repo/ui";
 
 describe("Logo 컴포넌트", () => {
   const renderLogo = () => {

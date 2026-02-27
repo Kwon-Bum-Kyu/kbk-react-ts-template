@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ButtonGroup, SystemIcon } from "@/common";
-import type { ButtonGroupProps } from "@/common";
+import { ButtonGroup, SystemIcon } from "@repo/ui";
+import type { ButtonGroupProps } from "@repo/ui";
 
 const meta: Meta<typeof ButtonGroup> = {
   title: "Common/ButtonGroup",

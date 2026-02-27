@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Dropdown from "@/components/common/Dropdown";
+import { Dropdown } from "@repo/ui";
 
 const mockOptions = [
   { label: "Option 1", value: "1" },

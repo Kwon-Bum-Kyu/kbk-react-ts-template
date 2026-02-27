@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
-import Empty from "@/components/common/Empty";
+import { Empty } from "@repo/ui";
 
 describe("Empty 컴포넌트", () => {
   it("기본 Empty 컴포넌트가 렌더링되어야 한다.", () => {

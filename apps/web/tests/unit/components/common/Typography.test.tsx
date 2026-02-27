@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Typography from "@/components/common/Typography";
+import { Typography } from "@repo/ui";
 
 describe("Typography 컴포넌트", () => {
   it("텍스트가 올바르게 렌더링되어야 한다.", () => {

@@ -1,4 +1,4 @@
-import { Typography, SystemIcon, Link, Logo, type SystemIconName } from "@/components/common";
+import { Typography, SystemIcon, Link, Logo, type SystemIconName } from "@repo/ui";
 
 const icons: { to: string; iconName: SystemIconName }[] = [
   {

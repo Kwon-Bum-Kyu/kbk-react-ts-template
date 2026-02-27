@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import ButtonGroup from "@/components/common/ButtonGroup";
-import SystemIcon from "@/components/common/SystemIcon";
+import { ButtonGroup, SystemIcon } from "@repo/ui";
 
 describe("ButtonGroup 컴포넌트", () => {
   it("모든 버튼이 렌더링되어야 한다.", () => {

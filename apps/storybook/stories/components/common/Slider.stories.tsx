@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Slider } from "@/common";
-import type { SliderProps } from "@/common";
+import { Slider } from "@repo/ui";
+import type { SliderProps } from "@repo/ui";
 import { useState } from "react";
 
 const meta: Meta<typeof Slider> = {

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Slider from "@/components/common/Slider";
+import { Slider } from "@repo/ui";
 
 describe("Slider 컴포넌트", () => {
   it("기본 슬라이더가 렌더링되어야 한다.", () => {

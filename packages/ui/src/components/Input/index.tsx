@@ -1,6 +1,6 @@
 import React, { useId } from "react";
 import { cn } from "../utils/cn";
-import { InputProps } from "@/components/common/Input/types.ts";
+import { InputProps } from "./types";
 
 const Input: React.FC<InputProps> = ({
   label,

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Breadcrumb } from "@/common";
-import type { BreadcrumbProps } from "@/common";
+import { Breadcrumb } from "@repo/ui";
+import type { BreadcrumbProps } from "@repo/ui";
 import { MemoryRouter } from "react-router-dom";
 
 const meta: Meta<typeof Breadcrumb> = {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DatePicker } from "@/common";
-import type { DatePickerProps } from "@/common";
+import { DatePicker } from "@repo/ui";
+import type { DatePickerProps } from "@repo/ui";
 import { useState } from "react";
 import { DateRange } from "react-day-picker";
 

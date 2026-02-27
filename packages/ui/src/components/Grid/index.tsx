@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "../utils/cn";
-import { GridItemProps, GridProps } from "@/components/common/Grid/types.tsx";
+import { GridItemProps, GridProps } from "./types";
 
 const Grid: React.FC<GridProps> = ({ children }) => {
   return (

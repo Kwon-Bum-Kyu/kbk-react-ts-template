@@ -13,7 +13,7 @@ import {
   SystemIcon,
   Empty,
   Pagenation as Pagination,
-} from "@/components/common";
+} from "@repo/ui";
 import React, { useState } from "react";
 import { DateRange } from "react-day-picker";
 

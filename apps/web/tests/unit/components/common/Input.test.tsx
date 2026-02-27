@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Input from "@/components/common/Input";
+import { Input } from "@repo/ui";
 
 describe("Input 컴포넌트", () => {
   it("기본 Input이 렌더링되면 모든 요소가 표시된다.", () => {

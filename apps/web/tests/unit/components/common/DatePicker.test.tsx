@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import DatePicker from "@/components/common/DatePicker";
+import { DatePicker } from "@repo/ui";
 
 describe("DatePicker 컴포넌트", () => {
   it("기본 DatePicker가 렌더링되어야 한다.", () => {

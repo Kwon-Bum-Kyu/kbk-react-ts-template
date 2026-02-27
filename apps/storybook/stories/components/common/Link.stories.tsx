@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Link } from "@/common";
-import type { LinkProps } from "@/common";
+import { Link } from "@repo/ui";
+import type { LinkProps } from "@repo/ui";
 import { MemoryRouter } from "react-router-dom";
 
 const meta: Meta<typeof Link> = {

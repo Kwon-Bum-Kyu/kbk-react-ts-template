@@ -1,4 +1,4 @@
-import { TypographyProps } from "@/components/common/Typography/types.ts";
+import { TypographyProps } from "./types";
 import React from "react";
 
 const variantStyles: Record<string, string> = {
