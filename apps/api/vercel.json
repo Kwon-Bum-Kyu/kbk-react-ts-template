@@ -1,9 +1,9 @@
 {
   "installCommand": "npm install --include=dev",
-  "buildCommand": "npx prisma generate && npx tsc",
+  "buildCommand": "npx prisma generate",
   "functions": {
     "api/index.ts": {
-      "includeFiles": "src/**,generated/prisma/**"
+      "includeFiles": "src/**/*.ts,generated/prisma/**"
     }
   },
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
