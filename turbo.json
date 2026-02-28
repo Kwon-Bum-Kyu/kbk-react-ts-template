@@ -29,7 +29,12 @@
       "persistent": true
     },
     "migrate": {
-      "inputs": ["migrations/**/*.sql"],
+      "inputs": ["prisma/schema.prisma", "prisma/migrations/**"],
+      "cache": false
+    },
+    "db:generate": {
+      "inputs": ["prisma/schema.prisma"],
+      "outputs": ["generated/prisma/**"],
       "cache": false
     }
   },

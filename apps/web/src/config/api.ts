@@ -5,18 +5,4 @@ export const API_CONFIG = {
   RETRY_DELAY: 1000,
 } as const;
 
-export const API_ENDPOINTS = {
-  AUTH: {
-    LOGIN: "/auth/login",
-    LOGOUT: "/auth/logout",
-    REFRESH: "/auth/refresh",
-    PROFILE: "/auth/profile",
-  },
-  USERS: {
-    LIST: "/users",
-    DETAIL: (id: string) => `/users/${id}`,
-    CREATE: "/users",
-    UPDATE: (id: string) => `/users/${id}`,
-    DELETE: (id: string) => `/users/${id}`,
-  },
-} as const;
+export const API_ENDPOINTS = {} as const;

@@ -24,7 +24,8 @@ const config: StorybookConfig = {
   },
 
   env: (config) => {
-    const env = loadEnv("storybook", process.cwd(), "");
+    const rootDir = path.resolve(__dirname, "../../..");
+    const env = loadEnv("development", rootDir, "");
     return {
       ...config,
       ...env,
@@ -32,7 +33,8 @@ const config: StorybookConfig = {
   },
 
   async viteFinal(config) {
-    const env = loadEnv("storybook", process.cwd(), "VITE_");
+    const rootDir = path.resolve(__dirname, "../../..");
+    const env = loadEnv("development", rootDir, "VITE_");
 
     // 기존 alias를 배열로 변환 (있다면)
     const existingAlias = config.resolve?.alias;

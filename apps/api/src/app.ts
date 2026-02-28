@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import userRoutes from './routes/user.routes';
 
 const app = express();
 
@@ -13,7 +12,7 @@ app.get('/health', (_req, res) => {
 });
 
 // Routes
-app.use('/api', userRoutes);
+// app.use('/api', yourRoutes);
 
 // Global Error Handler
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
