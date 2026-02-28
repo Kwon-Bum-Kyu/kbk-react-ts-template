@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd ../.. && npx turbo run build --filter=api",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ]
+}
