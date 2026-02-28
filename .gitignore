@@ -28,7 +28,9 @@ dist-ssr
 __screenshots__
 .DS_Store
 .turbo
-.env*
+.env
+.env.*
+!.env.example
 .cache
 server/dist
 public/dist
