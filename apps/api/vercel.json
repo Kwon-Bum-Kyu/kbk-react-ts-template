@@ -1,4 +1,5 @@
 {
-  "buildCommand": "tsc && prisma generate",
+  "installCommand": "npm install --include=dev",
+  "buildCommand": "prisma generate && tsc",
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
